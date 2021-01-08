@@ -1,6 +1,6 @@
-#container {
+/* #container {
     display: none;
-}
+} */
 
 .floatMove {
     -webkit-animation: wave 5.77778s 0.3s infinite linear;
