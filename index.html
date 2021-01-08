@@ -190,10 +190,13 @@
 
         $(window).on("load", function() {
 
-            $("#loader").css('display', 'none');
-            $('#container').css('display', 'block');
+            $(document).ready(function() {
+                $('#container').css('display', 'block');
+                $("#loader").css('display', 'none');
+            });
 
         });
+
 
         // jQuery Selections
         var $html = $('html'),
