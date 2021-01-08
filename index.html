@@ -18,20 +18,21 @@
     <meta property=og:title content="Happy Birthday!" />
     <meta property="og:description" content="Happy Birthday! 
     Make A Wish!">
-    <meta property="og:url" content="https://vedhase.github.io/" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/vedhase/vedhase.github.io/master/favicon/og-image.png" />
+    <meta property="og:url" content="https://joooot.github.io/HBD/" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/JOOOOT/HBD/main/favicon/HBD.png" />
     <meta property="fb:app_id" content="944824752668078" />
     <meta property="fb:admins" content="joot.rocket" />
     <link rel="icon" href="favicon/hbd.svg" />
     <link rel="apple-touch-icon" href="favicon/hbd.svg" />
-    <link rel="canonical" href="https://vedhase.github.io/" />
+    <link rel="canonical" href="https://joooot.github.io/HBD/" />
     <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
     <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/js/bootstrap.min.js"></script>
     <script src="vendor/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="assets/styles/css/custom.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/css/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 </head>
 
 
@@ -46,7 +47,9 @@
         </div>
 
     </div>
-
+    <audio id="bgm" loop>
+        <source src="HBD.mp3" type="audio/mpeg">
+      </audio>
     <div id="container" class="wrapper">
         <ul id="scene" class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
             <li class="layer" data-depth="0.00"></li>
@@ -78,8 +81,8 @@
                 </ul>
             </li>
             <li class="layer" data-depth="0.20">
-                <!-- <h1 class="title">parallax<em>.js</em></h1> -->
-                <img id="name_small" class="fixed-bottom name" src="assets/images/born.svg" alt="born baby name">
+                <!-- <div id="name_small" class="fixed-bottom name bbname">NAME</div> -->
+                <img id="name_small" class="fixed-bottom floatMove name" src="assets/images/born.svg" alt="born baby name">
             </li>
 
             <li class="layer" data-depth="0.30">
@@ -111,7 +114,8 @@
             </li>
             <li class="layer" data-depth="0.60">
                 <div class="lighthouse depth-60"></div>
-                <img id="name_big" class="fixed-bottom name" src="assets/images/born.svg" alt="born baby name">
+                <!-- <div id="name_big" class="fixed-bottom name bbname">NAME</div> -->
+                <img id="name_big" class="fixed-bottom name floatMove" src="assets/images/born.svg" alt="born baby name">
             </li>
 
             <li class="layer" data-depth="0.60">
@@ -185,6 +189,8 @@
     <script src="assets/scripts/js/libraries.min.js"></script>
     <script src="deploy/jquery.parallax.js"></script>
     <script>
+        var bgm = document.getElementById("bgm");
+
         $(window).on("load", function() {
 
             $(document).ready(function() {
@@ -193,6 +199,7 @@
             });
 
         });
+
         // jQuery Selections
         var $html = $('html'),
             $container = $('#container'),
@@ -242,11 +249,14 @@
         function showDetails() {
             $about.removeClass('hide');
             $toggle.removeClass('i');
+            bgm.play();
         }
 
         function hideDetails() {
             $about.addClass('hide');
             $toggle.addClass('i');
+            bgm.pause();
+            bgm.currentTime = 0;
         }
 
         // Listen for toggle click event.
