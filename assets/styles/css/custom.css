@@ -1,4 +1,5 @@
-#container {
+#container,
+#loader {
     display: none;
 }
 
