@@ -4,8 +4,7 @@ Happy Birthday! Make A Wish!
 
 ![HBD_Demo](https://raw.githubusercontent.com/JOOOOT/HBD/main/favicon/HBD.png)
 
-![HBD_Demo](https://raw.githubusercontent.com/JOOOOT/HBD/main/favicon/Demo2.gif)
+  <img width="100%" height="100%" src="">
 
-![HBD_Demo](https://raw.githubusercontent.com/JOOOOT/HBD/main/favicon/Demo1.gif)
 
 ![HBD_Demo](https://raw.githubusercontent.com/JOOOOT/HBD/main/favicon/Demo3.png)
