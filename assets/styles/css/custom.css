@@ -1,6 +1,16 @@
-/* #container {
+.loader-wrapper {
+    z-index: 5000;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    overflow: auto;
+    text-align: center;
+}
+
+div.hidden {
     display: none;
-} */
+}
 
 .floatMove {
     -webkit-animation: wave 5.77778s 0.3s infinite linear;
@@ -82,25 +92,6 @@
         height: 10%;
         margin-bottom: 200px;
     }
-}
-
-.loader-wrapper {
-    position: relative;
-    height: 100%;
-    z-index: 5000;
-    width: 100%;
-    background: #000000;
-    overflow: auto;
-    text-align: center;
-}
-
-#loading-text {
-    text-transform: uppercase;
-    font-family: 'Luckiest Guy', cursive;
-    color: white;
-    font-size: 25px;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
 }
 
 .loadWheel {
