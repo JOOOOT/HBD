@@ -865,7 +865,7 @@ footer .twitter-share-button {
 }
 
 .bg {
-    background-color: rgba(67, 77, 95, 0.2);
+    background-color: transparent;
     bottom: 0px;
     background-size: cover;
     position: absolute;
